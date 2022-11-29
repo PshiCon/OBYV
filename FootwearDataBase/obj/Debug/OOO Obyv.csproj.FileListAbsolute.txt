@@ -1,0 +1,33 @@
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\bin\Debug\FootwearDataBase.exe.config
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\bin\Debug\FootwearDataBase.exe
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\bin\Debug\FootwearDataBase.pdb
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\bin\Debug\EntityFramework.dll
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\bin\Debug\EntityFramework.xml
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.AssemblyReference.cache
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.SuggestedBindingRedirects.cache
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.Form1.resources
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.Properties.Resources.resources
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.GenerateResource.cache
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.CoreCompileInputs.cache
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.CopyComplete
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.exe
+C:\Users\andry\OneDrive\Рабочий стол\Программы\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.pdb
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\bin\Debug\FootwearDataBase.exe.config
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\bin\Debug\FootwearDataBase.exe
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\bin\Debug\FootwearDataBase.pdb
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\bin\Debug\EntityFramework.dll
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\bin\Debug\EntityFramework.xml
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.AssemblyReference.cache
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.SuggestedBindingRedirects.cache
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.Properties.Resources.resources
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.GenerateResource.cache
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.CoreCompileInputs.cache
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.CopyComplete
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.exe
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.pdb
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.formAuthorization.resources
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.FormProduct.resources
