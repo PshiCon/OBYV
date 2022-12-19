@@ -10,7 +10,7 @@ namespace FootwearDataBase.Entini
     public partial class Unit
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int UnitID { get; set; }
+        public int UnitId { get; set; }
 
         [Required]
         [StringLength(50)]

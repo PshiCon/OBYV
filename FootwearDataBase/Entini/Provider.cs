@@ -10,7 +10,7 @@ namespace FootwearDataBase.Entini
     public partial class Provider
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ProviderID { get; set; }
+        public int ProviderId { get; set; }
 
         [Required]
         [StringLength(50)]

@@ -78,11 +78,28 @@
     <Compile Include="Entini\Category.cs" />
     <Compile Include="Entini\DataBaseObyv.cs" />
     <Compile Include="Entini\Manufacturer.cs" />
+    <Compile Include="Entini\Order.cs" />
+    <Compile Include="Entini\OrderProduct.cs" />
+    <Compile Include="Entini\Point.cs" />
     <Compile Include="Entini\Product.cs" />
     <Compile Include="Entini\Provider.cs" />
     <Compile Include="Entini\Role.cs" />
+    <Compile Include="Entini\Status.cs" />
+    <Compile Include="Entini\sysdiagrams.cs" />
     <Compile Include="Entini\Unit.cs" />
     <Compile Include="Entini\User.cs" />
+    <Compile Include="View\formOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\formOrder.Designer.cs">
+      <DependentUpon>formOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\formEditingProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\formEditingProduct.Designer.cs">
+      <DependentUpon>formEditingProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\formProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +114,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\formEditingProduct.resx">
+      <DependentUpon>formEditingProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\formAuthorization.resx">
       <DependentUpon>formAuthorization.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +130,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\formOrder.resx">
+      <DependentUpon>formOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\formProduct.resx">
       <DependentUpon>formProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +167,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-add-4239136.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-shopping-bag-1008010.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

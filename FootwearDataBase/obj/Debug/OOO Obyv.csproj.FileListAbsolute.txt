@@ -31,3 +31,5 @@ C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBas
 C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.pdb
 C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.formAuthorization.resources
 C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.FormProduct.resources
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.formEditingProduct.resources
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.formOrder.resources

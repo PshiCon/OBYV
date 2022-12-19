@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAuthorization));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogotip = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +40,8 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonEnterGost = new System.Windows.Forms.Button();
             this.buttonEnter = new System.Windows.Forms.Button();
             this.dataGridViewUser = new System.Windows.Forms.DataGridView();
             this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,16 +51,14 @@
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonEnterGost = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -69,7 +69,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
             this.tableLayoutPanel1.Controls.Add(this.buttonClose, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBoxLogotip, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -82,6 +82,7 @@
             // buttonClose
             // 
             this.buttonClose.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonClose.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonClose.Location = new System.Drawing.Point(831, 3);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(99, 72);
@@ -90,16 +91,16 @@
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // pictureBox1
+            // pictureBoxLogotip
             // 
-            this.pictureBox1.BackgroundImage = global::FootwearDataBase.Properties.Resources.logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 72);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxLogotip.BackgroundImage = global::FootwearDataBase.Properties.Resources.logo;
+            this.pictureBoxLogotip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxLogotip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxLogotip.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxLogotip.Name = "pictureBoxLogotip";
+            this.pictureBoxLogotip.Size = new System.Drawing.Size(108, 72);
+            this.pictureBoxLogotip.TabIndex = 1;
+            this.pictureBoxLogotip.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
@@ -125,7 +126,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(702, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Title";
+            this.label1.Text = "Авторизация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -137,7 +138,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(702, 36);
             this.label2.TabIndex = 1;
-            this.label2.Text = "User";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
@@ -210,6 +210,33 @@
             this.textBoxLogin.TabIndex = 0;
             this.textBoxLogin.Text = "hr6zdl@yandex.ru";
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
+            this.tableLayoutPanel6.Controls.Add(this.buttonEnterGost, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.buttonEnter, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(273, 166);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 145F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(381, 145);
+            this.tableLayoutPanel6.TabIndex = 5;
+            // 
+            // buttonEnterGost
+            // 
+            this.buttonEnterGost.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonEnterGost.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEnterGost.Location = new System.Drawing.Point(3, 3);
+            this.buttonEnterGost.Name = "buttonEnterGost";
+            this.buttonEnterGost.Size = new System.Drawing.Size(187, 49);
+            this.buttonEnterGost.TabIndex = 4;
+            this.buttonEnterGost.Text = "Войти как гость";
+            this.buttonEnterGost.UseVisualStyleBackColor = true;
+            this.buttonEnterGost.Click += new System.EventHandler(this.buttonEnterGost_Click);
+            // 
             // buttonEnter
             // 
             this.buttonEnter.Dock = System.Windows.Forms.DockStyle.Top;
@@ -247,10 +274,10 @@
             // UserID
             // 
             this.UserID.HeaderText = "ID";
-            this.UserID.MinimumWidth = 6;
+            this.UserID.MinimumWidth = 2;
             this.UserID.Name = "UserID";
             this.UserID.ReadOnly = true;
-            this.UserID.Width = 125;
+            this.UserID.Width = 35;
             // 
             // UserName
             // 
@@ -278,54 +305,27 @@
             // 
             // Login
             // 
+            this.Login.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Login.HeaderText = "Логин";
             this.Login.MinimumWidth = 6;
             this.Login.Name = "Login";
             this.Login.ReadOnly = true;
-            this.Login.Width = 125;
             // 
             // Password
             // 
+            this.Password.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Password.HeaderText = "Пароль";
             this.Password.MinimumWidth = 6;
             this.Password.Name = "Password";
             this.Password.ReadOnly = true;
-            this.Password.Width = 125;
             // 
             // RoleID
             // 
+            this.RoleID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.RoleID.HeaderText = "Роль";
             this.RoleID.MinimumWidth = 6;
             this.RoleID.Name = "RoleID";
             this.RoleID.ReadOnly = true;
-            this.RoleID.Width = 125;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel6.Controls.Add(this.buttonEnterGost, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.buttonEnter, 1, 0);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(273, 166);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(381, 145);
-            this.tableLayoutPanel6.TabIndex = 5;
-            // 
-            // buttonEnterGost
-            // 
-            this.buttonEnterGost.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonEnterGost.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEnterGost.Location = new System.Drawing.Point(3, 3);
-            this.buttonEnterGost.Name = "buttonEnterGost";
-            this.buttonEnterGost.Size = new System.Drawing.Size(187, 49);
-            this.buttonEnterGost.TabIndex = 4;
-            this.buttonEnterGost.Text = "Войти как гость";
-            this.buttonEnterGost.UseVisualStyleBackColor = true;
-            this.buttonEnterGost.Click += new System.EventHandler(this.buttonEnterGost_Click);
             // 
             // formAuthorization
             // 
@@ -342,15 +342,15 @@
             this.Text = "Авторизация ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,7 +359,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxLogotip;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -370,6 +370,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button buttonEnterGost;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserLastName;
@@ -377,8 +379,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Login;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoleID;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button buttonEnterGost;
     }
 }
 

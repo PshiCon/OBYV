@@ -43,6 +43,7 @@ namespace FootwearDataBase
 
                 // List<String> user = Helper.DB.User.Select(x => x.UserLastName).ToList();
                 //dataGridViewUser.DataSource = user;
+
                 dataGridViewUser.Rows.Clear();
                 foreach (var item in users)
                 {
@@ -71,8 +72,7 @@ namespace FootwearDataBase
             { 
                 if(item.UserLogin == textBoxLogin.Text || item.UserPassword == textBoxPassword.Text)
                 {
-                    //MessageBox.Show(item.UserName + " " + item.RoleNameType(item.RoleID));
-
+                
                     FootwearDataBase.Classes.UserRoleName.NameUser  = item.UserLastName + " " + item.UserName + " " +item.UserMiddleName;
                     FootwearDataBase.Classes.UserRoleName.RoleUser = item.Role.RoleName;
 

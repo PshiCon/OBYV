@@ -6,23 +6,22 @@ namespace FootwearDataBase.Entini
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Manufacturer")]
-    public partial class Manufacturer
+    public partial class Status
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Manufacturer()
+        public Status()
         {
-            Product = new HashSet<Product>();
+            Order = new HashSet<Order>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ManufacturerId { get; set; }
+        public int StatusId { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string ManufacturerName { get; set; }
+        [StringLength(150)]
+        public string StatusName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Product { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
     }
 }
