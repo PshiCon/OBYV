@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formOrder));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -40,32 +44,36 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.labelDebilaryOrder = new System.Windows.Forms.Label();
             this.labelDecriptionOrder = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
+            this.Atricle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ButtonClick = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.labelNameUser = new System.Windows.Forms.Label();
             this.labelOrder = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBoxDescOrder = new System.Windows.Forms.TextBox();
+            this.comboBoxDelivery = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.labelPicterProduct = new System.Windows.Forms.Label();
             this.labelDecriptionProduct = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pictureBoxProduct = new System.Windows.Forms.PictureBox();
+            this.textBoxProduct = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonCreateCoupon = new System.Windows.Forms.Button();
+            this.buttonCreateOrder = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +106,7 @@
             this.buttonClose.TabIndex = 0;
             this.buttonClose.Text = "X";
             this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // pictureBoxLogotip
             // 
@@ -162,7 +171,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1217, 504);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1217, 615);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // tableLayoutPanel3
@@ -170,7 +179,7 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.dataGridViewOrder, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel7, 0, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -179,9 +188,9 @@
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.86174F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.13826F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(785, 498);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(785, 609);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -192,11 +201,11 @@
             this.tableLayoutPanel6.Controls.Add(this.labelDebilaryOrder, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.labelDecriptionOrder, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 314);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 343);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(779, 31);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(779, 49);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // labelDebilaryOrder
@@ -206,7 +215,7 @@
             this.labelDebilaryOrder.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDebilaryOrder.Location = new System.Drawing.Point(397, 0);
             this.labelDebilaryOrder.Name = "labelDebilaryOrder";
-            this.labelDebilaryOrder.Size = new System.Drawing.Size(379, 31);
+            this.labelDebilaryOrder.Size = new System.Drawing.Size(379, 49);
             this.labelDebilaryOrder.TabIndex = 0;
             this.labelDebilaryOrder.Text = "Пункт выдачи заказа";
             this.labelDebilaryOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -218,21 +227,75 @@
             this.labelDecriptionOrder.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDecriptionOrder.Location = new System.Drawing.Point(3, 0);
             this.labelDecriptionOrder.Name = "labelDecriptionOrder";
-            this.labelDecriptionOrder.Size = new System.Drawing.Size(388, 31);
+            this.labelDecriptionOrder.Size = new System.Drawing.Size(388, 49);
             this.labelDecriptionOrder.TabIndex = 1;
             this.labelDecriptionOrder.Text = "Описание заказа";
             this.labelDecriptionOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // dataGridViewOrder
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 43);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(779, 265);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewOrder.AllowUserToAddRows = false;
+            this.dataGridViewOrder.AllowUserToDeleteRows = false;
+            this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Atricle,
+            this.Name,
+            this.Count,
+            this.ButtonClick});
+            this.dataGridViewOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewOrder.Location = new System.Drawing.Point(3, 46);
+            this.dataGridViewOrder.Name = "dataGridViewOrder";
+            this.dataGridViewOrder.ReadOnly = true;
+            this.dataGridViewOrder.RowHeadersWidth = 51;
+            this.dataGridViewOrder.RowTemplate.Height = 24;
+            this.dataGridViewOrder.Size = new System.Drawing.Size(779, 291);
+            this.dataGridViewOrder.TabIndex = 0;
+            this.dataGridViewOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrder_CellContentClick);
+            this.dataGridViewOrder.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrder_CellEndEdit);
+            // 
+            // Atricle
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Atricle.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Atricle.HeaderText = "Артикл";
+            this.Atricle.MinimumWidth = 6;
+            this.Atricle.Name = "Atricle";
+            this.Atricle.ReadOnly = true;
+            this.Atricle.Visible = false;
+            this.Atricle.Width = 125;
+            // 
+            // Name
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Name.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Name.HeaderText = "Наименование";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            this.Name.Width = 125;
+            // 
+            // Count
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Count.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Count.HeaderText = "Количество";
+            this.Count.MinimumWidth = 6;
+            this.Count.Name = "Count";
+            this.Count.ReadOnly = true;
+            this.Count.Width = 125;
+            // 
+            // ButtonClick
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "Удалить";
+            dataGridViewCellStyle4.NullValue = "Удалить";
+            this.ButtonClick.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ButtonClick.HeaderText = "Действие";
+            this.ButtonClick.MinimumWidth = 6;
+            this.ButtonClick.Name = "ButtonClick";
+            this.ButtonClick.ReadOnly = true;
+            this.ButtonClick.Text = "Удалить";
+            this.ButtonClick.Width = 125;
             // 
             // tableLayoutPanel4
             // 
@@ -246,7 +309,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(779, 34);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(779, 37);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // labelNameUser
@@ -256,7 +319,7 @@
             this.labelNameUser.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelNameUser.Location = new System.Drawing.Point(392, 0);
             this.labelNameUser.Name = "labelNameUser";
-            this.labelNameUser.Size = new System.Drawing.Size(384, 34);
+            this.labelNameUser.Size = new System.Drawing.Size(384, 37);
             this.labelNameUser.TabIndex = 0;
             this.labelNameUser.Text = "ФИО клиента";
             this.labelNameUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -268,7 +331,7 @@
             this.labelOrder.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelOrder.Location = new System.Drawing.Point(3, 0);
             this.labelOrder.Name = "labelOrder";
-            this.labelOrder.Size = new System.Drawing.Size(383, 34);
+            this.labelOrder.Size = new System.Drawing.Size(383, 37);
             this.labelOrder.TabIndex = 1;
             this.labelOrder.Text = "Состав заказа";
             this.labelOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -278,33 +341,36 @@
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.60533F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.39467F));
-            this.tableLayoutPanel7.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.comboBox1, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.textBoxDescOrder, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.comboBoxDelivery, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 351);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 398);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(779, 144);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(779, 208);
             this.tableLayoutPanel7.TabIndex = 3;
             // 
-            // textBox1
+            // textBoxDescOrder
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(388, 138);
-            this.textBox1.TabIndex = 0;
+            this.textBoxDescOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxDescOrder.Enabled = false;
+            this.textBoxDescOrder.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxDescOrder.Location = new System.Drawing.Point(3, 3);
+            this.textBoxDescOrder.Multiline = true;
+            this.textBoxDescOrder.Name = "textBoxDescOrder";
+            this.textBoxDescOrder.Size = new System.Drawing.Size(388, 202);
+            this.textBoxDescOrder.TabIndex = 0;
             // 
-            // comboBox1
+            // comboBoxDelivery
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(397, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(379, 23);
-            this.comboBox1.TabIndex = 1;
+            this.comboBoxDelivery.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBoxDelivery.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxDelivery.FormattingEnabled = true;
+            this.comboBoxDelivery.Location = new System.Drawing.Point(397, 3);
+            this.comboBoxDelivery.Name = "comboBoxDelivery";
+            this.comboBoxDelivery.Size = new System.Drawing.Size(379, 32);
+            this.comboBoxDelivery.TabIndex = 1;
             // 
             // tableLayoutPanel8
             // 
@@ -312,17 +378,17 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Controls.Add(this.labelPicterProduct, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.labelDecriptionProduct, 0, 2);
-            this.tableLayoutPanel8.Controls.Add(this.pictureBox1, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.textBox2, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.pictureBoxProduct, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.textBoxProduct, 0, 3);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(794, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 4;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 241F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 352F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 189F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(420, 498);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(420, 609);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
             // labelPicterProduct
@@ -342,31 +408,34 @@
             this.labelDecriptionProduct.AutoSize = true;
             this.labelDecriptionProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelDecriptionProduct.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDecriptionProduct.Location = new System.Drawing.Point(3, 273);
+            this.labelDecriptionProduct.Location = new System.Drawing.Point(3, 384);
             this.labelDecriptionProduct.Name = "labelDecriptionProduct";
             this.labelDecriptionProduct.Size = new System.Drawing.Size(414, 36);
             this.labelDecriptionProduct.TabIndex = 1;
             this.labelDecriptionProduct.Text = "Описание товара";
             this.labelDecriptionProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // pictureBoxProduct
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(244)))), ((int)(((byte)(233)))));
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(414, 235);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(244)))), ((int)(((byte)(233)))));
+            this.pictureBoxProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxProduct.Location = new System.Drawing.Point(3, 35);
+            this.pictureBoxProduct.Name = "pictureBoxProduct";
+            this.pictureBoxProduct.Size = new System.Drawing.Size(414, 346);
+            this.pictureBoxProduct.TabIndex = 2;
+            this.pictureBoxProduct.TabStop = false;
             // 
-            // textBox2
+            // textBoxProduct
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(3, 312);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(414, 183);
-            this.textBox2.TabIndex = 3;
+            this.textBoxProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxProduct.Enabled = false;
+            this.textBoxProduct.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxProduct.Location = new System.Drawing.Point(3, 423);
+            this.textBoxProduct.Multiline = true;
+            this.textBoxProduct.Name = "textBoxProduct";
+            this.textBoxProduct.Size = new System.Drawing.Size(414, 183);
+            this.textBoxProduct.TabIndex = 3;
             // 
             // tableLayoutPanel9
             // 
@@ -375,51 +444,55 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 423F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 414F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
-            this.tableLayoutPanel9.Controls.Add(this.button1, 2, 0);
-            this.tableLayoutPanel9.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.buttonCreateCoupon, 2, 0);
+            this.tableLayoutPanel9.Controls.Add(this.buttonCreateOrder, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 572);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 683);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(1217, 68);
             this.tableLayoutPanel9.TabIndex = 4;
             // 
-            // button1
+            // buttonCreateCoupon
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(840, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(374, 62);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Сформивовать талон";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonCreateCoupon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonCreateCoupon.Enabled = false;
+            this.buttonCreateCoupon.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCreateCoupon.Location = new System.Drawing.Point(840, 3);
+            this.buttonCreateCoupon.Name = "buttonCreateCoupon";
+            this.buttonCreateCoupon.Size = new System.Drawing.Size(374, 62);
+            this.buttonCreateCoupon.TabIndex = 1;
+            this.buttonCreateCoupon.Text = "Сформивовать талон";
+            this.buttonCreateCoupon.UseVisualStyleBackColor = true;
+            this.buttonCreateCoupon.Click += new System.EventHandler(this.buttonCreateCoupon_Click_1);
             // 
-            // button2
+            // buttonCreateOrder
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(426, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(408, 62);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Оформить заказ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonCreateOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonCreateOrder.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCreateOrder.Location = new System.Drawing.Point(426, 3);
+            this.buttonCreateOrder.Name = "buttonCreateOrder";
+            this.buttonCreateOrder.Size = new System.Drawing.Size(408, 62);
+            this.buttonCreateOrder.TabIndex = 2;
+            this.buttonCreateOrder.Text = "Оформить заказ";
+            this.buttonCreateOrder.UseVisualStyleBackColor = true;
+            this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);
             // 
             // formOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1217, 640);
+            this.ClientSize = new System.Drawing.Size(1217, 751);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel9);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Candara Light", 7.8F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "formOrder";
+            
             this.Text = "Заказы";
+            this.Load += new System.EventHandler(this.formOrder_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -428,14 +501,14 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).EndInit();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -454,20 +527,24 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label labelDebilaryOrder;
         private System.Windows.Forms.Label labelDecriptionOrder;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewOrder;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label labelNameUser;
         private System.Windows.Forms.Label labelOrder;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBoxDescOrder;
+        private System.Windows.Forms.ComboBox comboBoxDelivery;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label labelPicterProduct;
         private System.Windows.Forms.Label labelDecriptionProduct;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox pictureBoxProduct;
+        private System.Windows.Forms.TextBox textBoxProduct;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCreateCoupon;
+        private System.Windows.Forms.Button buttonCreateOrder;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Atricle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
+        private System.Windows.Forms.DataGridViewButtonColumn ButtonClick;
     }
 }

@@ -17,6 +17,7 @@ namespace FootwearDataBase
         {
             InitializeComponent();
         }
+
         Bitmap bitmap;
         string fullPhoto;
         public List<string> Categories;
@@ -25,13 +26,19 @@ namespace FootwearDataBase
         string sqlCategory, sqlSort, sqlDiscount, sqlSearchString;
 
         public static string articly;
+       
+        public static  List<Classes.OrderClass> order;
 
         int filterDiscont,discontMax,discontMin,count;
 
         public List<Entini.Product> Products;
         string path = Application.StartupPath;
+
+
         private void FormProduct_Load(object sender, EventArgs e)
         {
+            order = new List<Classes.OrderClass>();
+
 
             Categories = Helper.DB.Category.Select(x => x.CategoryName).ToList();
             Categories.Insert(0, "Все категории");       
@@ -61,6 +68,42 @@ namespace FootwearDataBase
             formOrder formOrder= new formOrder();
             this.Hide();
             formOrder.Show();
+        }
+
+        private void dataGridViewProduct_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                buttonOrder.Enabled = true;
+                articly = dataGridViewProduct.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                dataGridViewProduct.ContextMenuStrip = contextMenuStrip1;
+            }
+            else
+            {
+                dataGridViewProduct.ContextMenuStrip = null;
+            }
+           
+        }
+
+        private void добавитьТоварToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int index = order.FindIndex(x => x.Article == articly);
+
+            if (index < 0)
+            {
+                Classes.OrderClass orderClass= new Classes.OrderClass();
+                orderClass.Article = articly;
+                orderClass.Count = 1;
+                order.Add(orderClass);
+            }
+            else
+            {
+                order[index].Count++;
+            }
+            dataGridViewProduct.ContextMenuStrip = null;
+
         }
 
         private void dataGridViewProduct_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

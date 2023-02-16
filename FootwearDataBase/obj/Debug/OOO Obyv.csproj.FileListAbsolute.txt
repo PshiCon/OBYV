@@ -33,3 +33,4 @@ C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBas
 C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.FormProduct.resources
 C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.formEditingProduct.resources
 C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\FootwearDataBase.formOrder.resources
+C:\Users\andry\OneDrive\Рабочий стол\FootwearDataBase\FootwearDataBase\obj\Debug\OOO Obyv.csproj.ResolveComReference.cache

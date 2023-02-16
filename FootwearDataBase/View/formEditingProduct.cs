@@ -157,14 +157,17 @@ namespace FootwearDataBase
                         if (photo != null)
                         {
                             string s = path + "\\Товар\\" + productArticle + ".jpg";
+                            if (File.Exists(s))
+                            {
+                                File.Delete(s);
+                            }
                             pictureBoxProduct.BackgroundImage.Save(s);
                         }
                         Helper.DB.SaveChanges(); 
                         MessageBox.Show("Информация в БД успешно обновлена");
                         FormProduct form = new FormProduct();
                         this.Close();
-                        form.Show();
-                                             
+                        form.Show();                                          
 
                     }
                     catch
@@ -179,6 +182,7 @@ namespace FootwearDataBase
 
 
         }
+
         void Data()
         {
             string artickle;

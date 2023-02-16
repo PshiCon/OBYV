@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProduct));
@@ -52,6 +53,8 @@
             this.Picter = new System.Windows.Forms.DataGridViewImageColumn();
             this.Decription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.добавитьТоварToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -59,6 +62,7 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -269,10 +273,14 @@
             this.buttonOrder.BackgroundImage = global::FootwearDataBase.Properties.Resources.free_icon_shopping_bag_1008010;
             this.buttonOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonOrder.Enabled = false;
+            this.buttonOrder.FlatAppearance.BorderSize = 0;
+            this.buttonOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonOrder.Location = new System.Drawing.Point(140, 3);
             this.buttonOrder.Name = "buttonOrder";
             this.buttonOrder.Size = new System.Drawing.Size(113, 69);
             this.buttonOrder.TabIndex = 0;
+            this.buttonOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.buttonOrder.UseVisualStyleBackColor = true;
             this.buttonOrder.Click += new System.EventHandler(this.buttonOrder_Click);
             // 
@@ -307,6 +315,7 @@
             this.dataGridViewProduct.Size = new System.Drawing.Size(1124, 416);
             this.dataGridViewProduct.TabIndex = 1;
             this.dataGridViewProduct.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProduct_CellContentDoubleClick);
+            this.dataGridViewProduct.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewProduct_CellMouseClick);
             // 
             // Article
             // 
@@ -351,6 +360,21 @@
             this.Discount.ReadOnly = true;
             this.Discount.Width = 75;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьТоварToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(190, 28);
+            // 
+            // добавитьТоварToolStripMenuItem
+            // 
+            this.добавитьТоварToolStripMenuItem.Name = "добавитьТоварToolStripMenuItem";
+            this.добавитьТоварToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
+            this.добавитьТоварToolStripMenuItem.Text = "Добавить товар";
+            this.добавитьТоварToolStripMenuItem.Click += new System.EventHandler(this.добавитьТоварToolStripMenuItem_Click);
+            // 
             // FormProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -374,6 +398,7 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -401,5 +426,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button buttonOrder;
         private System.Windows.Forms.Button buttonAddProduct;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem добавитьТоварToolStripMenuItem;
     }
 }
